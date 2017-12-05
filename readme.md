@@ -56,11 +56,10 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
-# portal-alumnos-um
 
-# Project Title
+# Portal alumnos UM
 
-One Paragraph of project description goes here
+Control escolar para la Universidad Maya
 
 ## Getting Started
 
@@ -132,7 +131,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Juan Carlos Montejo** - *Otros trabajos* - [PurpleBooth](https://github.com/jcmontejo)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
