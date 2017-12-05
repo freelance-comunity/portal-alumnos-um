@@ -20,7 +20,7 @@
                         </div>
                     @endif
 
-                  Bienvenido al sistema de la universidad Maya!
+                  Bienvenido al portal de alumnos de la universidad Maya!
                 </div>
             </div>
         </div>
