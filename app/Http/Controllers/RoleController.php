@@ -43,13 +43,21 @@ class RoleController extends Controller
      */
     public function store(Request $request)
     {
+        try {
+          $input = $request->all();
+          $input['name'] = str_slug($request->input('name'));
+          $input['guard_name'] = 'web';
+          Role::create($input);
 
-        Role::create($request->all());
-
-        Alert::message('Rol creado exitosamente!')->persistent("Cerrar");
+          Alert::message('Rol creado exitosamente!')->persistent("Cerrar");
 
 
-        return redirect('user/roles');
+          return redirect('user/roles');
+
+        } catch (\Exception $e) {
+          Alert::error(''.$e->getMessage().'')->persistent("Cerrar");
+          return redirect('user/roles');
+        }
     }
 
     /**

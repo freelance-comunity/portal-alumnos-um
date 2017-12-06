@@ -47,13 +47,13 @@ Editar Usuario
       </div>
     </div>
 
-    <div class="form-group {{ $errors->has('user_type') ? 'has-error' : ''}}">
+    {{-- <div class="form-group {{ $errors->has('user_type') ? 'has-error' : ''}}">
       {!! Form::label('user_type', 'Tipo de Usuario: ', ['class' => 'col-sm-3 control-label']) !!}
       <div class="col-sm-6">
-        {!! Form::select('user_type', ['1'=>'SUPER ADMINISTRADOR', '2'=>'ADMINISTRADOR', '3'=>'CONTROL ESCOLAR'] ,null, ['class' => 'form-control', 'required' => 'required']) !!} {!! $errors->first('user_type', '
+        {!! Form::select('user_type', $roles ,null, ['class' => 'form-control', 'required' => 'required']) !!} {!! $errors->first('user_type', '
         <p class="help-block">:message</p>') !!}
       </div>
-    </div>
+    </div> --}}
 
     <div class="form-group {{ $errors->has('email') ? 'has-error' : ''}}">
       {!! Form::label('email', 'Correo Electrónico: ', ['class' => 'col-sm-3 control-label']) !!}

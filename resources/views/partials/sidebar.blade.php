@@ -6,7 +6,7 @@
   </li>
   <li>
     <a href="#!" class="btn-sideBar-SubMenu">
-      <i class="zmdi zmdi-wrench zmdi-hc-fw"></i> Gestion del Sistema <i class="zmdi zmdi-caret-down pull-right"></i>
+      <i class="zmdi zmdi-tag zmdi-hc-fw"></i> Gestion del Sistema <i class="zmdi zmdi-caret-down pull-right"></i>
     </a>
     <ul class="list-unstyled full-box">
       <li>
@@ -57,23 +57,20 @@
   </li>
   <li>
     <a href="#!" class="btn-sideBar-SubMenu">
-      <i class="zmdi zmdi-graduation-cap zmdi-hc-fw"></i> Utilerias <i class="zmdi zmdi-caret-down pull-right"></i>
+      <i class="zmdi zmdi-widgets zmdi-hc-fw"></i> Utilerias <i class="zmdi zmdi-caret-down pull-right"></i>
     </a>
     <ul class="list-unstyled full-box">
       <li>
-        <a href="{{url('admin/campuses')}}"><i class="zmdi zmdi-pin zmdi-hc-fw"></i> Planteles</a>
+        <a href="#"><i class="zmdi zmdi-hearing zmdi-hc-fw"></i> Avisos</a>
       </li>
       <li>
-        <a href="#"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Asignaturas</a>
+        <a href="#"><i class="zmdi zmdi-border-color zmdi-hc-fw"></i> Mensajes</a>
       </li>
       <li>
-        <a href="#"><i class="zmdi zmdi-folder zmdi-hc-fw"></i> Carreras</a>
+        <a href="#"><i class="zmdi zmdi-calendar-check zmdi-hc-fw"></i> Calendario</a>
       </li>
       <li>
-        <a href="#"><i class="zmdi zmdi-accounts-add zmdi-hc-fw"></i> Grupos</a>
-      </li>
-      <li>
-        <a href="#"><i class="zmdi zmdi-attachment zmdi-hc-fw"></i> Planes</a>
+        <a href="#"><i class="zmdi zmdi-share zmdi-hc-fw"></i> Noticias</a>
       </li>
     </ul>
   </li>
@@ -83,7 +80,7 @@
     </a>
     <ul class="list-unstyled full-box">
       <li>
-        <a href="{{url('admin/campuses')}}"><i class="zmdi zmdi-pin zmdi-hc-fw"></i> Paises</a>
+        <a href="{{url('admin/campuses')}}"><i class="zmdi zmdi-google-maps zmdi-hc-fw"></i> Paises</a>
       </li>
     </ul>
   </li>

@@ -23,13 +23,13 @@ Editar Permiso
                     {!! $errors->first('name', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
-            <div class="form-group {{ $errors->has('guard_name') ? 'has-error' : ''}}">
+            {{-- <div class="form-group {{ $errors->has('guard_name') ? 'has-error' : ''}}">
                 {!! Form::label('guard_name', 'Nombre Secundario: ', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
                     {!! Form::text('guard_name', null, ['class' => 'form-control', 'required' => 'required']) !!}
                     {!! $errors->first('guard_name', '<p class="help-block">:message</p>') !!}
                 </div>
-            </div>
+            </div> --}}
 
 
     <div class="form-group">

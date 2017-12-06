@@ -6,6 +6,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\User;
+use Spatie\Permission\Models\Role;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Session;
@@ -34,7 +35,9 @@ class UsersController extends Controller
      */
     public function create()
     {
-        return view('backEnd.users.users.create');
+        $roles = Role::pluck('name','id');
+        return view('backEnd.users.users.create')
+        ->with('roles', $roles);
     }
 
     /**
@@ -44,15 +47,28 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, ['name' => 'required|string|max:255', 'last_name' => 'required|string|max:255', 'second_lastname' => 'required|string|max:255', 'username' => 'required|string|max:20', 'email' => 'required|string|email|max:255|unique:users', 'password' => 'required|string|min:6|confirmed']);
+        try {
+          $this->validate($request, ['name' => 'required|string|max:255', 'last_name' => 'required|string|max:255', 'second_lastname' => 'required|string|max:255', 'username' => 'required|string|max:20', 'email' => 'required|string|email|max:255|unique:users', 'password' => 'required|string|min:6|confirmed']);
 
-        $input = $request->all();
-        $input['password'] = Hash::make($request->input('password'));
-        User::create($input);
+          $role = Role::findOrFail($request->input('user_type'));
 
-        Alert::message('Usuario creado exitosamente!')->persistent("Cerrar");
+          $input = $request->all();
+          $input['password'] = Hash::make($request->input('password'));
+          $input['user_type'] = $role->name;
+          $user = User::create($input);
 
-        return redirect('user/users');
+          // Asignación del rol
+          $user->assignRole($role);
+
+          Alert::message('Usuario creado exitosamente!')->persistent("Cerrar");
+
+          return redirect('user/users');
+        } catch (\Exception $e) {
+          Alert::error(''.$e->getMessage().'')->persistent("Cerrar");
+
+          return redirect('user/users');
+        }
+
     }
 
     /**

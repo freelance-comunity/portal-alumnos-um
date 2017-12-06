@@ -43,13 +43,20 @@ class PermissionController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request->all();
-        $input['name'] = str_slug($request->input('name'));
-        Permission::create($input);
+        try {
+          $input = $request->all();
+          $input['name'] = str_slug($request->input('name'));
+          Permission::create($input);
 
-        Alert::message('Permiso creado exitosamente!')->persistent("Cerrar");
+          Alert::message('Permiso creado exitosamente!')->persistent("Cerrar");
 
-        return redirect('user/permissions');
+          return redirect('user/permissions');
+
+        } catch (\Exception $e) {
+          Alert::error(''.$e->getMessage().'')->persistent("Cerrar");
+          return redirect('user/permissions');
+        }
+
     }
 
     /**

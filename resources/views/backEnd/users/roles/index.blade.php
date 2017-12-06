@@ -14,7 +14,7 @@ Lista de Roles
         <table class="table table-bordered table-striped table-hover" id="roles">
             <thead>
                 <tr>
-                    <th>ID</th><th>Nombre</th><th>Nombre Secundario</th><th>Detalles</th>
+                    <th>ID</th><th>Nombre</th><th>Acceso</th><th>Detalles</th>
                 </tr>
             </thead>
             <tbody>
