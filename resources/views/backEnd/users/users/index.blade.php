@@ -30,6 +30,7 @@ Lista de Usuarios
                         ]) !!}
                             {!! Form::submit('Eliminar', ['class' => 'btn btn-danger btn-raised btn-sm']) !!}
                         {!! Form::close() !!}
+                        <a href="#" class="btn btn-raised btn-default btn-sm"> Roles</a>
                     </td>
                 </tr>
             @endforeach
